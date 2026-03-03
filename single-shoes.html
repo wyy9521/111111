@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>锦世源 - 单鞋系列</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="锦世源">
+                <span>锦世源</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="products.html" class="active">产品服务</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+                <li><a href="#" class="btn-consult">立即咨询</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 单鞋分类筛选区 -->
+    <section class="product-filter">
+        <div class="container">
+            <div class="filter-header">
+                <h2>单鞋系列</h2>
+                <a href="products.html" class="back-link">← 返回选择鞋类</a>
+            </div>
+            <div class="filter-wrapper">
+                <label>销售类型：</label>
+                <div class="tag-group">
+                    <span class="tag active" data-type="all">全部</span>
+                    <span class="tag" data-type="cross">跨境</span>
+                    <span class="tag" data-type="domestic">内销</span>
+                    <span class="tag" data-type="foreign">外贸</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 单鞋产品展示区 -->
+    <section class="product-list">
+        <div class="container">
+            <div class="product-grid" id="productGrid">
+                <div class="product-card" data-sale="cross">
+                    <img src="shoe1.jpg" alt="跨境单鞋">
+                    <h3>跨境爆款单鞋</h3>
+                    <p>轻便舒适 | 跨境专供</p>
+                </div>
+                <div class="product-card" data-sale="domestic">
+                    <img src="shoe2.jpg" alt="内销单鞋">
+                    <h3>内销经典单鞋</h3>
+                    <p>耐磨防滑 | 内销爆款</p>
+                </div>
+                <div class="product-card" data-sale="foreign">
+                    <img src="shoe3.jpg" alt="外贸单鞋">
+                    <h3>外贸定制单鞋</h3>
+                    <p>出口标准 | 外贸专供</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

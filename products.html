@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>锦世源 - 产品服务</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="锦世源">
+                <span>锦世源</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="products.html" class="active">产品服务</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+                <li><a href="#" class="btn-consult">立即咨询</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 产品分类选择区 -->
+    <section class="product-category">
+        <div class="container">
+            <h2>产品服务</h2>
+            <div class="category-selector">
+                <label for="shoeType">选择鞋类：</label>
+                <select id="shoeType" onchange="navigateToCategory()">
+                    <option value="">-- 请选择 --</option>
+                    <option value="single">单鞋</option>
+                    <option value="cotton">棉鞋</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function navigateToCategory() {
+            const select = document.getElementById('shoeType');
+            const value = select.value;
+            if (value) {
+                // 跳转到对应的分类页面
+                window.location.href = `${value}-shoes.html`;
+            }
+        }
+    </script>
+</body>
+</html>

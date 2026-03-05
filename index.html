@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
+     <!-- 导航栏 -->
+    <header class="navbar">
         <div class="container">
             <div class="logo">
-                <img src="logo.png" alt="锦世源">
+                <img src="images/logo.png" alt="锦世源">
                 <span>锦世源</span>
             </div>
             <ul class="nav-links">
@@ -19,30 +19,42 @@
                 <li><a href="about.html">关于我们</a></li>
                 <li><a href="products.html">产品服务</a></li>
                 <li><a href="contact.html">联系我们</a></li>
-                <li><a href="#" class="btn-consult">立即咨询</a></li>
+                <li><a href="#contact" class="btn-consult">立即咨询</a></li>
             </ul>
         </div>
-    </nav>
+    </header>
 
-    <!-- 英雄区 -->
+<!-- Hero 区 -->
     <section class="hero">
-        <div class="hero-overlay"></div>
+        <!-- 背景图 -->
+        <div class="hero-image">
+            <img src="images/factory-bg.jpg" alt="工厂背景">
+        </div>
+
+        <!-- 左侧内容 -->
         <div class="hero-content">
             <h1>偃师康泰鞋业</h1>
-            <p class="subtitle">一站式源头厂家</p>
-            <div class="features">
-                <span class="feature-item">✔ 源头工厂</span>
-                <span class="feature-item">✔ 跨境代发</span>
-                <span class="feature-item">✔ 闪电定制 现货批发</span>
+            <p>一站式源头厂家</p>
+
+            <div class="hero-features">
+                <span>✓ 源头工厂</span>
+                <span>✓ 跨境代发</span>
+                <span>✓ 闪电定制 现货批发</span>
             </div>
-            <div class="slogan">
-                <p class="slogan-cn">利他 · 共赢</p>
-                <p class="slogan-en">ALTRUISTICALLY · WIN-WIN</p>
-            </div>
-            <a href="#" class="btn-hero">立即咨询</a>
+
+            <h2>利他·共赢</h2>
+            <p class="hero-subtitle">ALTRUISTICALLY · WIN-WIN</p>
+
+            <a href="#contact" class="btn-hero">立即咨询</a>
         </div>
     </section>
+</body>
 
-    <script src="script.js"></script>
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 锦世源 - 偃师康泰鞋业 版权所有</p>
+        </div>
+    </footer>
 </body>
 </html>

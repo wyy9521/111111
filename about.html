@@ -3,38 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人网站 - 关于我</title>
+    <title>锦世源 - 关于我们</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- 导航栏 -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">我的网站</a>
+            <div class="logo">
+                <img src="logo.png" alt="锦世源">
+                <span>锦世源</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">首页</a></li>
-                <li><a href="about.html" class="active">关于我</a></li>
-                <li><a href="contact.html">联系我</a></li>
+                <li><a href="about.html" class="active">关于我们</a></li>
+                <li class="dropdown-parent">
+                    <a href="products.html">产品服务</a>
+                    <!-- 下拉菜单 -->
+                    <div class="dropdown">
+                        <a href="single-shoes.html">单鞋</a>
+                        <a href="cotton-shoes.html">棉鞋</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">联系我们</a></li>
+                <li><a href="#" class="btn-consult">立即咨询</a></li>
             </ul>
         </div>
     </nav>
 
+    <!-- 关于我们内容 -->
     <section class="page-content">
         <div class="container">
-            <h2>关于我</h2>
-            <p>大家好！我是这个网站的创作者，一名刚入门的编程爱好者。</p>
-            <p>我擅长的技能：</p>
+            <h2>关于我们</h2>
+            <p>偃师康泰鞋业（锦世源）是一家集设计、生产、销售于一体的专业制鞋企业，专注于单鞋、棉鞋的研发与生产，拥有多年行业经验。</p>
+            <p>我们的核心优势：</p>
             <ul>
-                <li>HTML/CSS 基础</li>
-                <li>简单的JavaScript交互</li>
-                <li>静态网站制作</li>
+                <li>自有工厂，源头直供，价格优势明显</li>
+                <li>支持跨境代发、内销批发、外贸定制等多种合作模式</li>
+                <li>严格的品控体系，确保每一双鞋的品质</li>
+                <li>快速响应的定制服务，满足客户个性化需求</li>
             </ul>
-            <p>我的目标是学习更多前端知识，制作更炫酷的网站！</p>
+            <p>我们始终秉持“利他 · 共赢”的经营理念，致力于为合作伙伴提供高品质的产品和优质的服务。</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 我的个人网站 - 保留所有权利</p>
+            <p>&copy; 2026 锦世源 - 偃师康泰鞋业 版权所有</p>
         </div>
     </footer>
 

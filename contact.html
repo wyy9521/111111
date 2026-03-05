@@ -3,36 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人网站 - 联系我</title>
+    <title>锦世源 - 联系我们</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- 导航栏 -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">我的网站</a>
+            <div class="logo">
+                <img src="logo.png" alt="锦世源">
+                <span>锦世源</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">首页</a></li>
-                <li><a href="about.html">关于我</a></li>
-                <li><a href="contact.html" class="active">联系我</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li class="dropdown-parent">
+                    <a href="products.html">产品服务</a>
+                    <!-- 下拉菜单 -->
+                    <div class="dropdown">
+                        <a href="single-shoes.html">单鞋</a>
+                        <a href="cotton-shoes.html">棉鞋</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" class="active">联系我们</a></li>
+                <li><a href="#" class="btn-consult">立即咨询</a></li>
             </ul>
         </div>
     </nav>
 
+    <!-- 联系我们内容 -->
     <section class="page-content">
         <div class="container">
-            <h2>联系我</h2>
-            <p>如果你有任何问题或建议，欢迎通过以下方式联系我：</p>
+            <h2>联系我们</h2>
+            <p>如果您有产品咨询、定制需求或合作意向，欢迎通过以下方式联系我们，我们将尽快回复您。</p>
             <ul>
-                <li>邮箱：example@mail.com</li>
-                <li>微信：example_wechat</li>
-                <li>QQ：123456789</li>
+                <li>联系人：李经理</li>
+                <li>联系电话：138XXXX8888</li>
+                <li>电子邮箱：jinshiyuan@163.com</li>
+                <li>工厂地址：河南省偃师市XX工业园区</li>
+                <li>微信：jinshiyuan888（扫码添加）</li>
             </ul>
+            <p>工作时间：周一至周六 8:00-18:00</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 我的个人网站 - 保留所有权利</p>
+            <p>&copy; 2026 锦世源 - 偃师康泰鞋业 版权所有</p>
         </div>
     </footer>
 

@@ -1,4 +1,4 @@
-// 平滑滚动到咨询区域
+// 首页咨询按钮交互
 document.querySelectorAll('.btn-consult, .btn-hero').forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -15,24 +15,21 @@ window.addEventListener('scroll', () => {
         navbar.style.background = 'rgba(20, 30, 48, 0.85)';
     }
 });
+
 // 产品筛选功能
 document.addEventListener('DOMContentLoaded', function() {
+    // 检查是否是产品分类页（单鞋/棉鞋）
+    const isProductPage = document.getElementById('productGrid') !== null;
+    if (!isProductPage) return;
+
     // 获取元素
-    const shoeTypeSelect = document.getElementById('shoeTypeSelect');
     const tags = document.querySelectorAll('.tag');
     const productCards = document.querySelectorAll('.product-card');
     
     // 初始化筛选状态
-    let currentShoeType = 'all';
     let currentSaleType = 'all';
 
-    // 一级筛选：下拉框选择鞋类
-    shoeTypeSelect.addEventListener('change', function() {
-        currentShoeType = this.value;
-        filterProducts();
-    });
-
-    // 二级筛选：点击选择销售类型
+    // 点击选择销售类型
     tags.forEach(tag => {
         tag.addEventListener('click', function() {
             // 移除所有标签的active样式
@@ -49,15 +46,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // 筛选产品核心函数
     function filterProducts() {
         productCards.forEach(card => {
-            const cardShoeType = card.dataset.shoe;
             const cardSaleType = card.dataset.sale;
             
             // 判断是否符合筛选条件
-            const shoeMatch = currentShoeType === 'all' || cardShoeType === currentShoeType;
             const saleMatch = currentSaleType === 'all' || cardSaleType === currentSaleType;
             
             // 显示/隐藏产品卡片
-            if (shoeMatch && saleMatch) {
+            if (saleMatch) {
                 card.style.display = 'block';
             } else {
                 card.style.display = 'none';

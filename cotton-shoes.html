@@ -17,7 +17,14 @@
             <ul class="nav-links">
                 <li><a href="index.html">首页</a></li>
                 <li><a href="about.html">关于我们</a></li>
-                <li><a href="products.html" class="active">产品服务</a></li>
+                <li class="dropdown-parent">
+                    <a href="products.html">产品服务</a>
+                    <!-- 下拉菜单 -->
+                    <div class="dropdown">
+                        <a href="single-shoes.html">单鞋</a>
+                        <a href="cotton-shoes.html" class="active">棉鞋</a>
+                    </div>
+                </li>
                 <li><a href="contact.html">联系我们</a></li>
                 <li><a href="#" class="btn-consult">立即咨询</a></li>
             </ul>
@@ -50,21 +57,27 @@
                 <div class="product-card" data-sale="cross">
                     <img src="shoe4.jpg" alt="跨境棉鞋">
                     <h3>跨境保暖棉鞋</h3>
-                    <p>加厚加绒 | 跨境代发</p>
+                    <p>加厚加绒 | 跨境代发 | 防寒抗冻</p>
                 </div>
                 <div class="product-card" data-sale="domestic">
                     <img src="shoe5.jpg" alt="内销棉鞋">
                     <h3>内销保暖棉鞋</h3>
-                    <p>高性价比 | 内销热销</p>
+                    <p>高性价比 | 内销热销 | 现货充足</p>
                 </div>
                 <div class="product-card" data-sale="foreign">
                     <img src="shoe6.jpg" alt="外贸棉鞋">
                     <h3>外贸加厚棉鞋</h3>
-                    <p>欧美标准 | 外贸定制</p>
+                    <p>欧美标准 | 外贸定制 | 品质保障</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 锦世源 - 偃师康泰鞋业 版权所有</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

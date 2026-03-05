@@ -5,19 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>锦世源 - 单鞋系列</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* 筛选标签样式（适配你原有.tag类） */
+        .tag-group {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        .tag {
+            padding: 8px 16px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            background: #fff;
+            cursor: pointer;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        .tag.active {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        /* 产品卡片基础样式 */
+        .product-card {
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .product-link {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
 </head>
 <body>
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <img src="logo.png" alt="锦世源">
+                <img src="images/logo.png" alt="锦世源">
                 <span>锦世源</span>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">首页</a></li>
                 <li><a href="about.html">关于我们</a></li>
-                <li><a href="products.html" class="active">产品服务</a></li>
+                <li class="dropdown-parent">
+                    <a href="products.html">产品服务</a>
+                    <!-- 下拉菜单 -->
+                    <div class="dropdown">
+                        <a href="single-shoes.html" class="active">单鞋</a>
+                        <a href="cotton-shoes.html">棉鞋</a>
+                    </div>
+                </li>
                 <li><a href="contact.html">联系我们</a></li>
                 <li><a href="#" class="btn-consult">立即咨询</a></li>
             </ul>
@@ -32,7 +77,7 @@
                 <a href="products.html" class="back-link">← 返回选择鞋类</a>
             </div>
             <div class="filter-wrapper">
-                <label>销售类型：</label>
+                <label>销售类型:</label>
                 <div class="tag-group">
                     <span class="tag active" data-type="all">全部</span>
                     <span class="tag" data-type="cross">跨境</span>
@@ -47,25 +92,892 @@
     <section class="product-list">
         <div class="container">
             <div class="product-grid" id="productGrid">
-                <div class="product-card" data-sale="cross">
-                    <img src="shoe1.jpg" alt="跨境单鞋">
-                    <h3>跨境爆款单鞋</h3>
-                    <p>轻便舒适 | 跨境专供</p>
-                </div>
-                <div class="product-card" data-sale="domestic">
-                    <img src="shoe2.jpg" alt="内销单鞋">
-                    <h3>内销经典单鞋</h3>
-                    <p>耐磨防滑 | 内销爆款</p>
-                </div>
-                <div class="product-card" data-sale="foreign">
-                    <img src="shoe3.jpg" alt="外贸单鞋">
-                    <h3>外贸定制单鞋</h3>
-                    <p>出口标准 | 外贸专供</p>
-                </div>
+                <!-- 货号DZ-SK8-1 -->
+                <a href="http://detail.1688.com/offer/1007388841631.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-SK8-1.jpg" alt="货号DZ-SK8-1 - 单鞋">
+                        <h3>货号:DZ-SK8-1</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>青色、黑色、紫色、灰色、粉色、深紫色、深灰色、大红色、米色、白色、咖色</p>
+                            <p><strong>尺码:</strong>36-43</p>
+                            <p><strong>价格:</strong>￥12.7</p>
+                            <p><strong>材质:</strong>鞋面:飞织，鞋底:PVC注塑</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-QQ10 -->
+                <a href="http://detail.1688.com/offer/1010874018172.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-QQ10.jpg" alt="货号G-QQ10 - 单鞋">
+                        <h3>货号:G-QQ10</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>浅卡其、米白色、黑色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥23.9</p>
+                            <p><strong>材质:</strong>鞋面:人造革<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-GT-CF500 -->
+                <a href="http://detail.1688.com/offer/924189922028.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-GT-CF500.jpg" alt="货号DZ-GT-CF500 - 单鞋">
+                        <h3>货号:DZ-GT-CF500</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>灰色、蓝色、咖色、紫色、粉色、米色、白色、黑色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥13.5</p>
+                            <p><strong>材质:</strong>鞋面:网层布面<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-DZL02 -->
+                <a href="http://detail.1688.com/offer/950268679710.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-DZL02.jpg" alt="货号G-DZL02 - 单鞋">
+                        <h3>货号:G-DZL02</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>果绿色、黑色、粉色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥26.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:聚氨酯</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-YF29 -->
+                <a href="http://detail.1688.com/offer/931126837746.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-YF29.jpg" alt="货号DZ-G-YF29 - 单鞋">
+                        <h3>货号:DZ-G-YF29</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>红色、粉色、米色、白色、黑色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥14.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-WT55 -->
+                <a href="http://detail.1688.com/offer/998436840014.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-WT55.jpg" alt="货号DZ-WT55 - 单鞋">
+                        <h3>货号:DZ-WT55</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>紫色、白色、黑色</p>
+                            <p><strong>尺码:</strong>36-43</p>
+                            <p><strong>价格:</strong>￥27.9</p>
+                            <p><strong>材质:</strong>鞋面:网布<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-JC816 -->
+                <a href="http://detail.1688.com/offer/993980492718.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-JC816.jpg" alt="货号DZ-JC816 - 单鞋">
+                        <h3>货号:DZ-JC816</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>粉色、白色、灰色、黑色、湖蓝色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥16.9</p>
+                            <p><strong>材质:</strong>鞋面:网面<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-JYX02 -->
+                <a href="http://detail.1688.com/offer/1007489336418.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-JYX02.jpg" alt="货号DZ-G-JYX02 - 单鞋">
+                        <h3>货号:DZ-G-JYX02</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>灰色、棕色、黑色</p>
+                            <p><strong>尺码:</strong>39-44</p>
+                            <p><strong>价格:</strong>￥20.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-MX1 -->
+                <a href="http://detail.1688.com/offer/1006286275357.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-MX1.jpg" alt="货号DZ-G-MX1 - 单鞋">
+                        <h3>货号:DZ-G-MX1</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>黑色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥9.5</p>
+                            <p><strong>材质:</strong>鞋面:布面<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-YF32 -->
+                <a href="http://detail.1688.com/offer/1008152288217.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-YF32.jpg" alt="货号DZ-G-YF32 - 单鞋">
+                        <h3>货号:DZ-G-YF32</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>砖红色、碧绿色、黑色、粉红色、活力蓝</p>
+                            <p><strong>尺码:</strong>36-43</p>
+                            <p><strong>价格:</strong>￥14.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号B-YD20 -->
+                <a href="http://detail.1688.com/offer/909823506924.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/B-YD20.jpg" alt="货号B-YD20 - 单鞋">
+                        <h3>货号:B-YD20</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>灰色、黑色、米色</p>
+                            <p><strong>尺码:</strong>39-44</p>
+                            <p><strong>价格:</strong>￥17.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-GT-CF800 -->
+                <a href="http://detail.1688.com/offer/1000995048292.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-GT-CF800.jpg" alt="货号DZ-GT-CF800 - 单鞋">
+                        <h3>货号:DZ-GT-CF800</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>粉色、白色、黑色</p>
+                            <p><strong>尺码:</strong>36-43</p>
+                            <p><strong>价格:</strong>￥14.5</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-JM291 -->
+                <a href="http://detail.1688.com/offer/873150047982.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-JM291.jpg" alt="货号G-JM291 - 单鞋">
+                        <h3>货号:G-JM291</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>白色、米色、黑色、白蓝色、白绿色、米黑色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥14.5</p>
+                            <p><strong>材质:</strong>鞋面:飞织，鞋底:PVC注塑</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-JLY08 -->
+                <a href="http://detail.1688.com/offer/1005915130407.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-JLY08.jpg" alt="货号DZ-G-JLY08 - 单鞋">
+                        <h3>货号:DZ-G-JLY08</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>米色、紫红色、灰色、黑色、湖蓝色</p>
+                            <p><strong>尺码:</strong>36-43</p>
+                            <p><strong>价格:</strong>￥12.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-X5808 -->
+                <a href="http://detail.1688.com/offer/957100414933.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-X5808.jpg" alt="货号DZ-X5808 - 单鞋">
+                        <h3>货号:DZ-X5808</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>黑色、灰色、宝蓝色</p>
+                            <p><strong>尺码:</strong>39-48</p>
+                            <p><strong>价格:</strong>￥15.5</p>
+                            <p><strong>材质:</strong>鞋面:网布<br>鞋底:pu</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-GT-SK82 -->
+                <a href="http://detail.1688.com/offer/921424573936.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-GT-SK82.jpg" alt="货号DZ-GT-SK82 - 单鞋">
+                        <h3>货号:DZ-GT-SK82</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>黑色、绿色、白色、紫色、灰色、黄色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥12.7</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-YS18 -->
+                <a href="http://detail.1688.com/offer/1003838629513.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-YS18.jpg" alt="货号DZ-YS18 - 单鞋">
+                        <h3>货号:DZ-YS18</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>灰色、蓝色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥24.9</p>
+                            <p><strong>材质:</strong>鞋面:网布<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-YX10 -->
+                <a href="http://detail.1688.com/offer/877954230071.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/G-YX10.jpg" alt="货号G-YX10 - 单鞋">
+                        <h3>货号:G-YX10</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>咖色、黑色、米色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥12.5</p>
+                            <p><strong>材质:</strong>鞋面:飞织，鞋底:PVC注塑</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-JM795 -->
+                <a href="http://detail.1688.com/offer/889938947710.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-JM795.jpg" alt="货号DZ-JM795 - 单鞋">
+                        <h3>货号:DZ-JM795</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>白色、黑色、粉色、米色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥16.5</p>
+                            <p><strong>材质:</strong>鞋面:飞织，鞋底:PVC注塑</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-B-JJ01 -->
+                <a href="http://detail.1688.com/offer/1019473471093.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-B-JJ01.jpg" alt="货号DZ-B-JJ01 - 单鞋">
+                        <h3>货号:DZ-B-JJ01</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>灰色、黑色</p>
+                            <p><strong>尺码:</strong>39-44</p>
+                            <p><strong>价格:</strong>￥20.9</p>
+                            <p><strong>材质:</strong>鞋面:网布面<br>鞋底:pu</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-DF10 -->
+                <a href="http://detail.1688.com/offer/949863391160.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-DF10.jpg" alt="货号G-DF10 - 单鞋">
+                        <h3>货号:G-DF10</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>果绿色、黑色、粉色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥25.9</p>
+                            <p><strong>材质:</strong>鞋面:网布<br>鞋底:PU</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号GT-CZ06 -->
+                <a href="http://detail.1688.com/offer/921437809340.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/GT-CZ06.jpg" alt="货号GT-CZ06 - 单鞋">
+                        <h3>货号:GT-CZ06</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>黑色、黄色、咖色、米色</p>
+                            <p><strong>尺码:</strong>35-41</p>
+                            <p><strong>价格:</strong>￥16.3</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-S86 -->
+                <a href="http://detail.1688.com/offer/963634173038.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-S86.jpg" alt="货号G-S86 - 单鞋">
+                        <h3>货号:G-S86</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>丁香紫、月光白、活力橙、暗夜黑、新芽绿</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥26.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号B-YD19 -->
+                <a href="http://detail.1688.com/offer/910323341522.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/B-YD19.jpg" alt="货号B-YD19 - 单鞋">
+                        <h3>货号:B-YD19</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>灰色、黑色、米色</p>
+                            <p><strong>尺码:</strong>39-44</p>
+                            <p><strong>价格:</strong>￥17.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-LD01 -->
+                <a href="http://detail.1688.com/offer/1006724895778.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-LD01.jpg" alt="货号G-LD01 - 单鞋">
+                        <h3>货号:G-LD01</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>卡其色、黑色、紫色、米色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥32.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织，鞋底:TPR</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号B-JZ135 -->
+                <a href="http://detail.1688.com/offer/900632628591.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/B-JZ135.jpg" alt="货号B-JZ135 - 单鞋">
+                        <h3>货号:B-JZ135</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>卡其色、黑色、灰色</p>
+                            <p><strong>尺码:</strong>39-44</p>
+                            <p><strong>价格:</strong>￥16.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-BT-HT100 -->
+                <a href="http://detail.1688.com/offer/933965602286.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-BT-HT100.jpg" alt="货号DZ-BT-HT100 - 单鞋">
+                        <h3>货号:DZ-BT-HT100</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>米色、白色、黑色</p>
+                            <p><strong>尺码:</strong>39-45</p>
+                            <p><strong>价格:</strong>￥15.9</p>
+                            <p><strong>材质:</strong>鞋面:合成革<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-HT83 -->
+                <a href="http://detail.1688.com/offer/1010201363116.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-HT83.jpg" alt="货号DZ-HT83 - 单鞋">
+                        <h3>货号:DZ-HT83</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>棕色、白色、黑色</p>
+                            <p><strong>尺码:</strong>36-47</p>
+                            <p><strong>价格:</strong>￥25</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-YX33 -->
+                <a href="http://detail.1688.com/offer/902327638151.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-YX33.jpg" alt="货号G-YX33 - 单鞋">
+                        <h3>货号:G-YX33</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>红色、黑色、驼色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥14.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号B-CF591 -->
+                <a href="http://detail.1688.com/offer/872406217011.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/B-CF591.jpg" alt="货号B-CF591 - 单鞋">
+                        <h3>货号:B-CF591</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>咖色、黑色、灰色</p>
+                            <p><strong>尺码:</strong>39-44</p>
+                            <p><strong>价格:</strong>￥16.9</p>
+                            <p><strong>材质:</strong>鞋面:皮革+布，鞋底:PVC注塑</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-YF36 -->
+                <a href="http://detail.1688.com/offer/1000716738497.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-YF36.jpg" alt="货号DZ-G-YF36 - 单鞋">
+                        <h3>货号:DZ-G-YF36</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>紫色、白色、灰色、黑色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥14.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-S-2 -->
+                <a href="http://detail.1688.com/offer/874063624687.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-S-2.jpg" alt="货号G-S-2 - 单鞋">
+                        <h3>货号:G-S-2</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>黑色、紫色、灰色、粉色、米色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥18.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织，鞋底:PVC注塑</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-WT56 -->
+                <a href="http://detail.1688.com/offer/1007928302676.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-WT56.jpg" alt="货号DZ-WT56 - 单鞋">
+                        <h3>货号:DZ-WT56</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>黑橘、黑灰</p>
+                            <p><strong>尺码:</strong>39-47</p>
+                            <p><strong>价格:</strong>￥30.9</p>
+                            <p><strong>材质:</strong>鞋面:织物<br>鞋底:EVA</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-W20 -->
+                <a href="http://detail.1688.com/offer/893173076744.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-W20.jpg" alt="货号G-W20 - 单鞋">
+                        <h3>货号:G-W20</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>粉色、黑色、灰色、米色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥18.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织，鞋底:PVC注塑</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-JFX05 -->
+                <a href="http://detail.1688.com/offer/909253332325.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-JFX05.jpg" alt="货号G-JFX05 - 单鞋">
+                        <h3>货号:G-JFX05</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>米色、卡其色、黑色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥17.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-Y12 -->
+                <a href="http://detail.1688.com/offer/876552789209.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-Y12.jpg" alt="货号G-Y12 - 单鞋">
+                        <h3>货号:G-Y12</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>巧克力色、驼色、沙色、栗色</p>
+                            <p><strong>尺码:</strong>35-40</p>
+                            <p><strong>价格:</strong>￥23.9</p>
+                            <p><strong>材质:</strong>鞋面:人造皮革，鞋底:聚氨酯（PU）</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号B-JY188 -->
+                <a href="http://detail.1688.com/offer/962936732853.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/B-JY188.jpg" alt="货号B-JY188 - 单鞋">
+                        <h3>货号:B-JY188</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>灰色、黑色、米色</p>
+                            <p><strong>尺码:</strong>39-44</p>
+                            <p><strong>价格:</strong>￥14.9</p>
+                            <p><strong>材质:</strong>鞋面:网布<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-JM001 -->
+                <a href="http://detail.1688.com/offer/903154291252.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-JM001.jpg" alt="货号G-JM001 - 单鞋">
+                        <h3>货号:G-JM001</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>胭脂紫、黑色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥33.9</p>
+                            <p><strong>材质:</strong>鞋面:网布<br>鞋底:聚氨酯</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-JLY06 -->
+                <a href="http://detail.1688.com/offer/1010836601420.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-JLY06.jpg" alt="货号DZ-G-JLY06 - 单鞋">
+                        <h3>货号:DZ-G-JLY06</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>皮粉、蓝色、灰色、黑色</p>
+                            <p><strong>尺码:</strong>36-43</p>
+                            <p><strong>价格:</strong>￥15</p>
+                            <p><strong>材质:</strong>鞋面:布<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-2168 -->
+                <a href="http://detail.1688.com/offer/1010472227661.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-2168.jpg" alt="货号DZ-G-2168 - 单鞋">
+                        <h3>货号:DZ-G-2168</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>卡其色、红色、紫色、黑色、军绿色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥13.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-CF22 -->
+                <a href="http://detail.1688.com/offer/891395322714.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-CF22.jpg" alt="货号G-CF22 - 单鞋">
+                        <h3>货号:G-CF22</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>咖色、米色、黑色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥16.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织，鞋底:PVC注塑</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-W112 -->
+                <a href="http://detail.1688.com/offer/876637146120.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-W112.jpg" alt="货号G-W112 - 单鞋">
+                        <h3>货号:G-W112</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>奶咖色、黑色、红色、灰色、深咖色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥17.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织，鞋底:PVC注塑</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-YX24 -->
+                <a href="http://detail.1688.com/offer/910810175119.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-YX24.jpg" alt="货号G-YX24 - 单鞋">
+                        <h3>货号:G-YX24</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>红色、咖色、黑色、米色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥14.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-XJ01 -->
+                <a href="http://detail.1688.com/offer/1021740461208.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-XJ01.jpg" alt="货号DZ-G-XJ01 - 单鞋">
+                        <h3>货号:DZ-G-XJ01</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>米白色、酒红色、咖啡色、卡其色</p>
+                            <p><strong>尺码:</strong>36-42</p>
+                            <p><strong>价格:</strong>￥21.9</p>
+                            <p><strong>材质:</strong>鞋面:仿麂皮绒<br>鞋底:pvc</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-K71 -->
+                <a href="http://detail.1688.com/offer/1013713845548.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-K71.jpg" alt="货号DZ-G-K71 - 单鞋">
+                        <h3>货号:DZ-G-K71</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>橙粉、蓝色、深蓝色、黑色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥18.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-RY33 -->
+                <a href="http://detail.1688.com/offer/1014131618205.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-RY33.jpg" alt="货号DZ-RY33 - 单鞋">
+                        <h3>货号:DZ-RY33</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>白色、红色、豹纹、黑色、黑红格</p>
+                            <p><strong>尺码:</strong>35-43</p>
+                            <p><strong>价格:</strong>￥17.9</p>
+                            <p><strong>材质:</strong>鞋面:帆布<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-CF3000 -->
+                <a href="http://detail.1688.com/offer/906446648278.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/G-CF3000.jpg" alt="货号G-CF3000 - 单鞋">
+                        <h3>货号:G-CF3000</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>黑色、红色、白色、米色、粉色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥16.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-YS19 -->
+                <a href="http://detail.1688.com/offer/1017234856841.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-YS19.jpg" alt="货号DZ-G-YS19 - 单鞋">
+                        <h3>货号:DZ-G-YS19</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>黑色、橘色、灰色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥25.9</p>
+                            <p><strong>材质:</strong>鞋面:网面<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-JYX01 -->
+                <a href="http://detail.1688.com/offer/1005315127134.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-JYX01.jpg" alt="货号DZ-G-JYX01 - 单鞋">
+                        <h3>货号:DZ-G-JYX01</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>咖色、黄色、灰色、黑色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥16.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号B-YM88 -->
+                <a href="http://detail.1688.com/offer/1018116661748.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/B-YM88.jpg" alt="货号B-YM88 - 单鞋">
+                        <h3>货号:B-YM88</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>黑色、蓝色</p>
+                            <p><strong>尺码:</strong>39-44</p>
+                            <p><strong>价格:</strong>￥21.9</p>
+                            <p><strong>材质:</strong>鞋面:莱卡<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-JM888 -->
+                <a href="http://detail.1688.com/offer/1007748664512.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-JM888.jpg" alt="货号DZ-G-JM888 - 单鞋">
+                        <h3>货号:DZ-G-JM888</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>白色、浅橙色、灰色、黑色、卡其色</p>
+                            <p><strong>尺码:</strong>36-43</p>
+                            <p><strong>价格:</strong>￥16.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-8188 -->
+                <a href="http://detail.1688.com/offer/1020861806211.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-8188.jpg" alt="货号DZ-G-8188 - 单鞋">
+                        <h3>货号:DZ-G-8188</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>皮粉色、黑色、灰色、绿色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥15.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:pvc</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-JLY09 -->
+                <a href="http://detail.1688.com/offer/1012714228930.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-JLY09.jpg" alt="货号DZ-G-JLY09 - 单鞋">
+                        <h3>货号:DZ-G-JLY09</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>米色、红色、香芋紫、湖蓝色、青色、黑色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥12.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-YF31 -->
+                <a href="http://detail.1688.com/offer/939586171604.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-YF31.jpg" alt="货号DZ-G-YF31 - 单鞋">
+                        <h3>货号:DZ-G-YF31</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>黑色、白色、灰色、米色、香芋色、绿色、蓝色</p>
+                            <p><strong>尺码:</strong>36-42</p>
+                            <p><strong>价格:</strong>￥12.5</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-ZS668 -->
+                <a href="http://detail.1688.com/offer/920575667555.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-ZS668.jpg" alt="货号G-ZS668 - 单鞋">
+                        <h3>货号:G-ZS668</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>米色、黑色、咖色、紫色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥13.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织，鞋底:PVC注塑</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-QXR2 -->
+                <a href="http://detail.1688.com/offer/1013967125016.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-QXR2.jpg" alt="货号G-QXR2 - 单鞋">
+                        <h3>货号:G-QXR2</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>驼色、咖色、卡其色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥24.9</p>
+                            <p><strong>材质:</strong>鞋面:绒面<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-SK25 -->
+                <a href="http://detail.1688.com/offer/885540840387.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-SK25.jpg" alt="货号G-SK25 - 单鞋">
+                        <h3>货号:G-SK25</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>紫色、米色、绿色、黑色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥14.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织，鞋底:PVC注塑</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号DZ-G-JM18 -->
+                <a href="http://detail.1688.com/offer/1019827989829.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="跨境">
+                        <img src="images/single-shoes/DZ-G-JM18.jpg" alt="货号DZ-G-JM18 - 单鞋">
+                        <h3>货号:DZ-G-JM18</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>白灰、白黑、白粉</p>
+                            <p><strong>尺码:</strong>36-43</p>
+                            <p><strong>价格:</strong>￥14.9</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-JH01 -->
+                <a href="http://detail.1688.com/offer/1001035827305.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-JH01.jpg" alt="货号G-JH01 - 单鞋">
+                        <h3>货号:G-JH01</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>棕色、米白色、黑色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥18.5</p>
+                            <p><strong>材质:</strong>鞋面:飞织<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 货号G-YM08 -->
+                <a href="http://detail.1688.com/offer/1007794390406.html" class="product-link" target="_blank">
+                    <div class="product-card" data-sale="内销">
+                        <img src="images/single-shoes/G-YM08.jpg" alt="货号G-YM08 - 单鞋">
+                        <h3>货号:G-YM08</h3>
+                        <div class="product-specs">
+                            <p><strong>颜色:</strong>紫色、红色</p>
+                            <p><strong>尺码:</strong>36-41</p>
+                            <p><strong>价格:</strong>￥21.9</p>
+                            <p><strong>材质:</strong>鞋面:莱卡<br>鞋底:PVC</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 锦世源 - 偃师康泰鞋业 版权所有</p>
+        </div>
+    </footer>
+
+    <!-- 筛选功能JS（放在body最后） -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 匹配你页面上的.tag类筛选按钮
+        const filterButtons = document.querySelectorAll('.tag');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // 移除所有按钮的active类
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // 给当前点击的按钮加active类
+                this.classList.add('active');
+
+                // 获取筛选类型（适配你标签的data-type属性）
+                const filterType = this.getAttribute('data-type');
+                
+                // 遍历卡片进行筛选
+                productCards.forEach(card => {
+                    const cardSaleType = card.getAttribute('data-sale');
+                    // 适配data-type的取值：all/cross(跨境)/domestic(内销)/foreign(外贸)
+                    let targetType = '';
+                    if (filterType === 'cross') targetType = '跨境';
+                    else if (filterType === 'domestic') targetType = '内销';
+                    else if (filterType === 'foreign') targetType = '外贸';
+                    else targetType = 'all';
+
+                    // 控制显示/隐藏
+                    if (filterType === 'all' || cardSaleType === targetType) {
+                        card.parentElement.style.display = 'block';
+                    } else {
+                        card.parentElement.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+    </script>
 </body>
 </html>

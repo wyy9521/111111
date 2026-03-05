@@ -17,37 +17,45 @@
             <ul class="nav-links">
                 <li><a href="index.html">首页</a></li>
                 <li><a href="about.html">关于我们</a></li>
-                <li><a href="products.html" class="active">产品服务</a></li>
+                <li class="dropdown-parent">
+                    <a href="products.html" class="active">产品服务</a>
+                    <!-- 下拉菜单 -->
+                    <div class="dropdown">
+                        <a href="single-shoes.html">单鞋</a>
+                        <a href="cotton-shoes.html">棉鞋</a>
+                    </div>
+                </li>
                 <li><a href="contact.html">联系我们</a></li>
                 <li><a href="#" class="btn-consult">立即咨询</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- 产品分类选择区 -->
-    <section class="product-category">
+    <!-- 产品总览 -->
+    <section class="product-overview">
         <div class="container">
             <h2>产品服务</h2>
-            <div class="category-selector">
-                <label for="shoeType">选择鞋类：</label>
-                <select id="shoeType" onchange="navigateToCategory()">
-                    <option value="">-- 请选择 --</option>
-                    <option value="single">单鞋</option>
-                    <option value="cotton">棉鞋</option>
-                </select>
+            <div class="category-cards">
+                <a href="single-shoes.html" class="category-card">
+                    <img src="single-shoes-banner.jpg" alt="单鞋系列">
+                    <h3>单鞋系列</h3>
+                    <p>跨境 | 内销 | 外贸</p>
+                </a>
+                <a href="cotton-shoes.html" class="category-card">
+                    <img src="cotton-shoes-banner.jpg" alt="棉鞋系列">
+                    <h3>棉鞋系列</h3>
+                    <p>跨境 | 内销 | 外贸</p>
+                </a>
             </div>
         </div>
     </section>
 
-    <script>
-        function navigateToCategory() {
-            const select = document.getElementById('shoeType');
-            const value = select.value;
-            if (value) {
-                // 跳转到对应的分类页面
-                window.location.href = `${value}-shoes.html`;
-            }
-        }
-    </script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 锦世源 - 偃师康泰鞋业 版权所有</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

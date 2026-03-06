@@ -72,17 +72,12 @@
     <!-- 单鞋分类筛选区 -->
     <section class="product-filter">
         <div class="container">
-            <div class="filter-header">
-                <h2>单鞋系列</h2>
-                <a href="products.html" class="back-link">← 返回选择鞋类</a>
-            </div>
             <div class="filter-wrapper">
                 <label>销售类型:</label>
                 <div class="tag-group">
                     <span class="tag active" data-type="all">全部</span>
                     <span class="tag" data-type="cross">跨境</span>
                     <span class="tag" data-type="domestic">内销</span>
-                    <span class="tag" data-type="foreign">外贸</span>
                 </div>
             </div>
         </div>
@@ -933,11 +928,10 @@
                 // 遍历卡片进行筛选
                 productCards.forEach(card => {
                     const cardSaleType = card.getAttribute('data-sale');
-                    // 适配data-type的取值：all/cross(跨境)/domestic(内销)/foreign(外贸)
+                    // 适配data-type的取值：all/cross(跨境)/domestic(内销)
                     let targetType = '';
                     if (filterType === 'cross') targetType = '跨境';
                     else if (filterType === 'domestic') targetType = '内销';
-                    else if (filterType === 'foreign') targetType = '外贸';
                     else targetType = 'all';
 
                     // 控制显示/隐藏

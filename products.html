@@ -3,103 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>导航栏下拉菜单</title>
-    <!-- 引入CSS样式 -->
-    <style>
-        /* 基础重置 */
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            text-decoration: none;
-            box-sizing: border-box;
-        }
-
-        /* 导航栏容器 */
-        .navbar {
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .navbar .container {
-            width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 80px;
-        }
-
-        /* logo样式 */
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #333;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .logo img {
-            width: 40px;
-            height: 40px;
-        }
-
-        /* 导航链接 */
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links li {
-            position: relative; /* 关键：给下拉菜单定位用 */
-            height: 80px;
-            line-height: 80px;
-        }
-
-        .nav-links a {
-            color: #333;
-            font-size: 16px;
-            padding: 0 8px;
-        }
-
-        .nav-links a.active {
-            color: #e63946;
-            font-weight: bold;
-        }
-
-        /* 下拉菜单核心样式 */
-        .dropdown {
-            /* 默认隐藏下拉框 */
-            display: none;
-            /* 定位：相对于父级li */
-            position: absolute;
-            top: 80px;
-            left: 0;
-            /* 下拉框样式 */
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border-radius: 4px;
-            width: 120px;
-            z-index: 999; /* 防止被其他元素遮挡 */
-        }
-
-        .dropdown a {
-            display: block; /* 让链接占满整行 */
-            height: 40px;
-            line-height: 40px;
-            padding: 0 15px;
-        }
-
-        .dropdown a:hover {
-            background-color: #f5f5f5;
-        }
-
-        /* 关键：鼠标悬浮到父级li时，显示下拉框 */
-        .dropdown-parent:hover .dropdown {
-            display: block;
-        }
-    </style>
+    <title>锦世源 - 产品服务</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- 导航栏 -->
@@ -120,11 +25,11 @@
                         <a href="cotton-shoes.html">棉鞋</a>
                     </div>
                 </li>
+                <li><a href="contact.html">联系我们</a></li>
+                <li><a href="#" class="btn-consult">立即咨询</a></li>
             </ul>
         </div>
     </nav>
-</body>
-</html>
 
     <!-- 产品总览 -->
     <section class="product-overview">
@@ -134,12 +39,12 @@
                 <a href="single-shoes.html" class="category-card">
                     <img src="single-shoes-banner.jpg" alt="单鞋系列">
                     <h3>单鞋系列</h3>
-                    <p>跨境 | 内销 | 外贸</p>
+                    <p>跨境 | 内销</p>
                 </a>
                 <a href="cotton-shoes.html" class="category-card">
                     <img src="cotton-shoes-banner.jpg" alt="棉鞋系列">
                     <h3>棉鞋系列</h3>
-                    <p>跨境 | 内销 | 外贸</p>
+                    <p>跨境 | 内销</p>
                 </a>
             </div>
         </div>
